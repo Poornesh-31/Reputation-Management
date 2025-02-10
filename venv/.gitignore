@@ -1,0 +1,10 @@
+# Ignore sensitive & unnecessary files
+.env
+peak-stream-key.json
+.vscode/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+Scripts/
