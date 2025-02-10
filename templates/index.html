@@ -1,0 +1,25 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Reputation Checker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h2 class="text-center">Company Reputation Checker</h2>
+        <form action="/summary" method="post" class="mt-4">
+            <div class="mb-3">
+                <label for="company_name" class="form-label">Enter Company Name:</label>
+                <input type="text" id="company_name" name="company_name" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Check Reputation</button>
+        </form>
+        {% if error %}
+        <div class="alert alert-danger mt-3">{{ error }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>

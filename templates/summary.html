@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reputation Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .summary {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: justify;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .back-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-button a {
+            display: inline-block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .back-button a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Reputation Summary for {{ company }}</h2>
+
+        <div class="summary">
+            <h3>AI-Generated Summary</h3>
+            <p>{{ summary }}</p>
+        </div>
+
+        <div class="back-button">
+            <a href="/">🔙 Back to Search</a>
+        </div>
+    </div>
+</body>
+</html>
+
