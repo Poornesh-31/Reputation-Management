@@ -32,6 +32,30 @@
             line-height: 1.6;
             font-size: 16px;
         }
+        .search-results {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .search-results h3 {
+            color: #856404;
+        }
+        .search-results ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .search-results li {
+            margin-bottom: 10px;
+        }
+        .search-results a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .search-results a:hover {
+            text-decoration: underline;
+        }
         .back-button {
             display: block;
             width: 100%;
@@ -51,6 +75,12 @@
         .back-button a:hover {
             background-color: #0056b3;
         }
+        .summary h3, .summary h4 {
+            color: #333;
+        }
+        .summary ul {
+            padding-left: 20px;
+        }
     </style>
 </head>
 <body>
@@ -59,8 +89,23 @@
 
         <div class="summary">
             <h3>AI-Generated Summary</h3>
-            <p>{{ summary }}</p>
+            {{ summary | safe }}
         </div>
+
+        <!-- 📌 Search Result Links -->
+        {% if search_results %}
+        <div class="search-results">
+            <h3>📌 Sources & References:</h3>
+            <ul>
+                {% for result in search_results %}
+                    <li>
+                        <a href="{{ result.link }}" target="_blank">{{ result.title }}</a>  
+                        <br> <small>{{ result.snippet }}</small>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
 
         <div class="back-button">
             <a href="/">🔙 Back to Search</a>
