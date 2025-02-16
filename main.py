@@ -24,6 +24,7 @@ app.debug = True
 
 # ✅ Google Custom Search with filtering
 def google_search(company_name):
+<<<<<<< Updated upstream
     query = f"{company_name} employee reviews salary work culture career growth work-life balance"
     url = "https://www.googleapis.com/customsearch/v1"
     params = {"key": os.getenv('API_KEY'), "cx": os.getenv('SEARCH_ENGINE_ID'), "q": query, "num": 5}
@@ -38,6 +39,35 @@ def google_search(company_name):
         if any(source in item.get("link", "") for source in allowed_sources)
     ]
 
+=======
+    query = f"{company_name} employee reviews salary work culture career growth work-life balance site:linkedin.com OR site:glassdoor.com OR site:indeed.com OR site:bloomberg.com OR site:quora.com OR site:reddit.com"
+    url = "https://www.googleapis.com/customsearch/v1"
+    params = {
+        "key": os.getenv('API_KEY'),
+        "cx": os.getenv('SEARCH_ENGINE_ID'),
+        "q": query,
+        "num": 7
+    }
+    response = requests.get(url, params=params)
+    response.raise_for_status()
+    search_results = response.json()
+
+    # Filter for only relevant websites and remove job postings
+    allowed_sources = ["linkedin.com", "glassdoor.com", "indeed.com", "bloomberg.com", "quora.com", "reddit.com"]
+    filtered_results = [
+        {
+            "title": item.get("title"),
+            "snippet": item.get("snippet"),
+            "link": item.get("link")
+        }
+        for item in search_results.get("items", [])
+        if any(source in item.get("link", "") for source in allowed_sources)
+        and not re.search(r'job|hiring|apply', item.get("title", "").lower())
+    ]
+
+    return filtered_results
+
+>>>>>>> Stashed changes
 # ✅ AI Summary with improved prompt and JSON parsing
 def generate_summary(search_results, company_name):
     prompt = f"""
