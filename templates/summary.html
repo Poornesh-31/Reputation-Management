@@ -7,8 +7,6 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
         }
         .container {
@@ -16,101 +14,79 @@
             margin: 40px auto;
             padding: 20px;
             background: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        h2 {
+        h2, h3 {
             text-align: center;
             color: #333;
         }
-        .summary {
-            background-color: #f8f9fa;
+        .summary, .search-results {
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 20px;
-            text-align: justify;
+        }
+        .summary {
+            background-color: #eef5ff;
             line-height: 1.6;
-            font-size: 16px;
         }
         .search-results {
             background-color: #fff3cd;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        .search-results h3 {
-            color: #856404;
         }
         .search-results ul {
-            list-style-type: none;
             padding: 0;
+            list-style-type: none;
         }
-        .search-results li {
-            margin-bottom: 10px;
-        }
-        .search-results a {
-            text-decoration: none;
+        .search-results li a {
             color: #007bff;
             font-weight: bold;
+            text-decoration: none;
         }
-        .search-results a:hover {
+        .search-results li a:hover {
             text-decoration: underline;
-        }
-        .back-button {
-            display: block;
-            width: 100%;
-            text-align: center;
-            margin-top: 20px;
         }
         .back-button a {
             display: inline-block;
-            padding: 10px 15px;
-            text-decoration: none;
+            padding: 10px;
             color: white;
             background-color: #007bff;
             border-radius: 5px;
-            font-size: 16px;
             font-weight: bold;
+            text-decoration: none;
         }
         .back-button a:hover {
             background-color: #0056b3;
-        }
-        .summary h3, .summary h4 {
-            color: #333;
-        }
-        .summary ul {
-            padding-left: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Reputation Summary for {{ company }}</h2>
+        <h2>📊 {{ company }} Summary</h2>
 
+        <!-- 📝 AI-Generated Summary with Emojis and Pros/Cons -->
         <div class="summary">
-            <h3>AI-Generated Summary</h3>
             {{ summary | safe }}
         </div>
 
         <!-- 📌 Search Result Links -->
         {% if search_results %}
         <div class="search-results">
-            <h3>📌 Sources & References:</h3>
+            <h3>📌 Sources & References</h3>
             <ul>
                 {% for result in search_results %}
                     <li>
-                        <a href="{{ result.link }}" target="_blank">{{ result.title }}</a>  
-                        <br> <small>{{ result.snippet }}</small>
+                        <a href="{{ result.link }}" target="_blank">{{ result.title }}</a>
+                        <br><small>{{ result.snippet }}</small>
                     </li>
                 {% endfor %}
             </ul>
         </div>
         {% endif %}
 
+        <!-- 🔙 Back Button -->
         <div class="back-button">
             <a href="/">🔙 Back to Search</a>
         </div>
     </div>
 </body>
 </html>
-
