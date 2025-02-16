@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "peak-stream-449519-r4",
+  "private_key_id": "593ff38d1f7d2bdc10c2d62fe353d0dda628395c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDjFREcPHkAckSn\nMQU3FDuIOUvesxa7ZJbMfGLbrXihqT5E4ATIxuLbE1dbgGuO07CY489n+akn2aL/\nmJMwe/ju7JcmyqH02TxjrpVvuR01odPYc8lSjvJioOvzxCMRZ8EKfM9/mxE69d4n\ny4If78f8n7vtwPtWENl+9SulqkDl8doyJbS5OHuH1qd3ZlEohXx7QN9g9MARkitK\n+5B6qO2G9o5KfIe/4Mtgg8E1gutYNjmB0v1BuYKdB31YOAniWM/gH2SVeQ13n7k0\nG54SAhyYynC0ZigAq8yIJBZFQyNJJDdz2oxCUYmZPFjUcHq9HgaIGElswl8OiRKG\nJ3hSanUTAgMBAAECggEAQ9qkrTpIseBzMT5Nn6K1E0SDrjz3WvF4ugulAp14QV4w\nFCaYZ2I+oVXLMbVS7m/FAjp4XEpWyGiY8yUlPkSdIs+hbt73vBE5oVOmpaa72q3L\nfo9Cph++v8f0GXgPPoExRq/61NeCM4sKYfvGm0JsEMmuPyH+OD56rxwVecBA+jRV\nXM9EeBayvqgF0++OnfjOjTxx87UTryDiy6u1ltOdhoRTORbxdDxfm0doClAYrMTe\nTuI96+bUfXkw96oEmJ9bRKWvDaiImMJUqX8qJIlgQ6TLr5QjVU/j/PdCgoWlAf4e\npaLCflR0c35nxzR8Izsk3HdsOrQyKWeY4IpilGCseQKBgQD6NsQ1T6PISFBeq6gE\nc1t1cVgvc0V/paVBW3jdTKtlw4Mwbs8LDpkeAJdiJ3nk8SfPl8pOTy6pbaIAmhdx\nQHMMGPp5lBR4I5gepo509aMVzDcaFgqBDEOKu5Pxw1l4eJfPVcUCCfQXyeJZ+hX/\n1eSojl2G/X7WgP8IJ1s+2GlB3QKBgQDoVV04JjPjEB0H5CG46lnTtxt8GAAFmv4G\n257eLm6hKWfQWvMyKdm52bhgp0HJRuq2KBhi1ku6mr1KOBgzQmcvP1V/4mc71GPg\nn8beGrefNj2DPlDyZ1aa6qchivhT5mDDGxJ3V5vvLTAy8Gqexy33c9YtOQUqfOoA\npHvxwCK7rwKBgQCcB7LrG7KinpWfs6OewuDxp7C6RkO8ies3incgaUMovnb8qNzr\npDrPfsboKn3Uyp1s0tcRZkdO2FMB1RVxRiN4E8t+LV1mXavq0SpcvSDp4uMpnT0H\npEIqLTbguFT+zxS78lxcHSDeBMLmIRG+6/8fLUgdec6yrNZcm05HLmTU8QKBgQCM\nRmYnLaGsWaE9j3bw38XmdyrIDPGOcNspJtbPzPcMpSRB/3fQdMY5WQPij3m/3ep+\nmszGeB53B1B8jEvIPzJvq2yi7v5neD/pcm6u0TDGlwgiwrA6+zumA0FvlimC9pi7\nlA/dMG88xGrShqfJP/c37Z+F5GSDF7JtOuJ+vwP5jwKBgCcNPv/2CnmNtm8dEeao\n2vBOngSb2MS5ShZGos2I3QuBWzfatHCfNFRxx/YfaS5kq62bQS5kNYZiZkiu4l9E\nisUUr2IGKwEVbg/i+FzoTlzHd2wOphjKzRw1NRRa/UGSLgQUVtfL14Rm1LOMJBOz\nlOebYpJAAl/IvWZSO3wTgskI\n-----END PRIVATE KEY-----\n",
+  "client_email": "reputation-management@peak-stream-449519-r4.iam.gserviceaccount.com",
+  "client_id": "110466034624812773011",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/reputation-management%40peak-stream-449519-r4.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

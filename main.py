@@ -5,18 +5,15 @@ import json
 from flask import Flask, render_template, request
 from vertexai.generative_models import GenerativeModel
 from dotenv import load_dotenv
+import re
 
 # ✅ Load environment variables
 load_dotenv()
 
-# ✅ Set the correct service account JSON file
-GOOGLE_CLOUD_CREDENTIALS = r"E:\Reputation Management\peak-stream-key.json"
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = GOOGLE_CLOUD_CREDENTIALS
-
-# ✅ Force correct region and initialize Vertex AI
+# ✅ Initialize Vertex AI
 PROJECT_ID = "peak-stream-449519-r4"
 LOCATION = "us-central1"
-vertexai.init(project=PROJECT_ID, location=LOCATION)  # ✅ Ensure correct region
+vertexai.init(project=PROJECT_ID, location=LOCATION)
 
 # ✅ Initialize Gemini AI Model
 gemini_model = GenerativeModel("gemini-pro")
@@ -25,100 +22,89 @@ gemini_model = GenerativeModel("gemini-pro")
 app = Flask(__name__)
 app.debug = True  
 
-# ✅ Function to perform Google Custom Search with filtering
-def google_search(query):
-    print(f"🔍 Searching Google for: {query}")
+# ✅ Google Custom Search with filtering
+def google_search(company_name):
+<<<<<<< Updated upstream
+    query = f"{company_name} employee reviews salary work culture career growth work-life balance"
+    url = "https://www.googleapis.com/customsearch/v1"
+    params = {"key": os.getenv('API_KEY'), "cx": os.getenv('SEARCH_ENGINE_ID'), "q": query, "num": 5}
+    response = requests.get(url, params=params)
+    response.raise_for_status()
+    search_results = response.json()
+    
+    allowed_sources = ["linkedin.com", "glassdoor.com", "reddit.com", "quora.com"]
+    return [
+        {"title": item.get("title"), "snippet": item.get("snippet"), "link": item.get("link")}
+        for item in search_results.get("items", [])
+        if any(source in item.get("link", "") for source in allowed_sources)
+    ]
+
+=======
+    query = f"{company_name} employee reviews salary work culture career growth work-life balance site:linkedin.com OR site:glassdoor.com OR site:indeed.com OR site:bloomberg.com OR site:quora.com OR site:reddit.com"
     url = "https://www.googleapis.com/customsearch/v1"
     params = {
         "key": os.getenv('API_KEY'),
         "cx": os.getenv('SEARCH_ENGINE_ID'),
         "q": query,
-        "num": 5  
+        "num": 7
     }
-    try:
-        response = requests.get(url, params=params)
-        response.raise_for_status()
-        search_results = response.json()
+    response = requests.get(url, params=params)
+    response.raise_for_status()
+    search_results = response.json()
 
-        # ✅ Filtering: Remove job postings, ads, and irrelevant content
-        filtered_results = []
-        blocked_keywords = ["hiring", "careers", "jobs", "apply", "recruitment", "salary", "discount", "offer", "buy", "sale"]
+    # Filter for only relevant websites and remove job postings
+    allowed_sources = ["linkedin.com", "glassdoor.com", "indeed.com", "bloomberg.com", "quora.com", "reddit.com"]
+    filtered_results = [
+        {
+            "title": item.get("title"),
+            "snippet": item.get("snippet"),
+            "link": item.get("link")
+        }
+        for item in search_results.get("items", [])
+        if any(source in item.get("link", "") for source in allowed_sources)
+        and not re.search(r'job|hiring|apply', item.get("title", "").lower())
+    ]
 
-        for item in search_results.get("items", []):
-            title = item.get("title", "").lower()
-            snippet = item.get("snippet", "").lower()
-            link = item.get("link", "")
+    return filtered_results
 
-            if any(keyword in title or keyword in snippet for keyword in blocked_keywords):
-                continue  
-
-            filtered_results.append({
-                "title": item.get("title"),
-                "snippet": item.get("snippet"),
-                "link": link
-            })
-
-        return filtered_results
-
-    except requests.exceptions.RequestException as e:
-        print(f"❌ Error during API request: {e}")
-        return []
-
-# ✅ Function to generate a company reputation summary using Gemini AI
-# ✅ Function to generate a company reputation summary using Gemini AI
+>>>>>>> Stashed changes
+# ✅ AI Summary with improved prompt and JSON parsing
 def generate_summary(search_results, company_name):
-    try:
-        if not search_results:
-            return "⚠️ No relevant search results found to generate a summary."
+    prompt = f"""
+        Provide a structured JSON summary for '{company_name}' focusing on job-seeker insights. 
+        The JSON should include the following keys with real, company-specific insights:
+        {{
+            "{company_name} Summary": {{
+                "Salary & Compensation": "Average salary ranges and bonuses.",
+                "Work Culture & Environment": "Overview of company culture.",
+                "Work-Life Balance": "Insights into flexibility and work hours.",
+                "Career Growth & Promotions": "Opportunities for growth.",
+                "Employee Benefits": "Key perks and benefits."
+            }}
+        }}
+        Only return the JSON object without extra text or explanations.
+    """
 
-        # 🔹 Format search results
-        search_summary = "\n".join([
-            f"{item['title']} - {item['snippet']} ({item['link']})"
-            for item in search_results
-        ])
+    response = gemini_model.generate_content(prompt)
 
-        # 🔹 AI Prompt for a Clean and Well-Formatted Summary
-        prompt = f"""
-        Generate a **concise and professional** reputation summary for **{company_name}**, based on the latest search results.
+    # ✅ Print entire response for debugging
+    print("AI Full Response:", response.text)
 
-        ### **Instructions:**
-        - **Write in three clear paragraphs**, covering:
-          1️⃣ **Positive Aspects**  
-          2️⃣ **Negative Aspects**  
-          3️⃣ **Overall Impression**  
-        - **DO NOT use bullet points, lists, stars (`*`), or unnecessary symbols**.
-        - **Use complete sentences** and ensure **smooth paragraph transitions**.
-        - **Keep it structured, neutral, and easy to read**.
-        - **Ensure the text follows a justified format**.
+    # ✅ Try extracting JSON using regex
+    match = re.search(r'\{.*\}', response.text.strip(), re.DOTALL)
 
-        ### **Example Format:**
-        ---
-        ## {company_name} Reputation Summary  
+    if match:
+        try:
+            # ✅ Print matched JSON for debugging
+            print("Matched JSON String:", match.group(0))
+            return json.loads(match.group(0))
+        except json.JSONDecodeError as e:
+            print(f"JSON Decode Error: {e}")
+            return {"error": "Failed to parse AI response."}
+    else:
+        print("No JSON response detected.")
+        return {"error": "No JSON response from AI."}
 
-        {company_name} is a well-established company known for [key strengths]. Customers appreciate its [positive aspects], making it a preferred choice for [products/services]. Its commitment to [strengths] has helped it gain a strong market presence.  
-
-        Despite its success, some concerns have been raised regarding [negative aspects], including [specific issues]. Customers have reported challenges related to [criticism], which has led to discussions about potential improvements. Addressing these concerns could help enhance its overall reputation.  
-
-        Overall, {company_name} remains a reputable brand in [industry]. While there are areas for improvement, it continues to offer [valuable aspects] and serves as a trusted choice for [target audience].  
-        ---
-
-        Now, generate the summary in this **clean and justified format**.
-        """
-
-        print("🔍 Sending refined prompt to Gemini AI...")
-        response = gemini_model.generate_content(prompt)
-
-        # ✅ Extract AI-generated text with proper formatting
-        if response and hasattr(response, 'text'):
-            return response.text.strip()  # ✅ Ensure clean output
-        else:
-            return "⚠️ AI service did not return a valid response."
-
-    except Exception as e:
-        print(f"❌ Error with Gemini AI: {e}")
-        return "⚠️ AI service encountered an error while generating the summary."
-
-# ✅ Flask Routes
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -126,13 +112,16 @@ def index():
 @app.route('/summary', methods=['POST'])
 def summary():
     company_name = request.form['company_name']
-    if not company_name:
-        return render_template('index.html', error="Please enter a company name.")
-
     search_results = google_search(company_name)
-    summary_text = generate_summary(search_results, company_name)
+    summary_data = generate_summary(search_results, company_name)
 
-    return render_template('summary.html', company=company_name, summary=summary_text)
+    if "error" in summary_data:
+        return render_template('index.html', error=summary_data["error"])
+
+    return render_template('summary.html',
+                           company=company_name,
+                           summary=summary_data.get(f"{company_name} Summary", {}),
+                           search_results=search_results)
 
 if __name__ == '__main__':
     app.run(debug=True)
