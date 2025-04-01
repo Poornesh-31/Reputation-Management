@@ -1,70 +1,17 @@
+<!-- summary.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reputation Summary</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h2, h3 {
-            text-align: center;
-            color: #333;
-        }
-        .summary, .search-results {
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .summary {
-            background-color: #eef5ff;
-            line-height: 1.6;
-        }
-        .search-results {
-            background-color: #fff3cd;
-        }
-        .search-results ul {
-            padding: 0;
-            list-style-type: none;
-        }
-        .search-results li a {
-            color: #007bff;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .search-results li a:hover {
-            text-decoration: underline;
-        }
-        .back-button a {
-            display: inline-block;
-            padding: 10px;
-            color: white;
-            background-color: #007bff;
-            border-radius: 5px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .back-button a:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 </head>
-<body>
-    <div class="container">
-        <h2>📊 {{ company }} Summary</h2>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h2 class="text-center">📊 {{ company }} Reputation Summary</h2>
 
-        <!-- 📝 AI-Generated Summary with Emojis and Pros/Cons -->
-        <div class="summary">
+        <div class="summary p-3 bg-white rounded shadow-sm">
             <h3>💼 Salary & Compensation:</h3>
             <p>{{ summary['Salary & Compensation'] }}</p>
 
@@ -81,14 +28,13 @@
             <p>{{ summary['Employee Benefits'] }}</p>
         </div>
 
-        <!-- 📌 Search Result Links -->
         {% if search_results %}
-        <div class="search-results">
+        <div class="search-results mt-4 p-3 bg-white rounded shadow-sm">
             <h3>📌 Sources & References</h3>
-            <ul>
+            <ul class="list-unstyled">
                 {% for result in search_results %}
-                    <li>
-                        <a href="{{ result.link }}" target="_blank">{{ result.title }}</a>
+                    <li class="mb-2">
+                        <a href="{{ result.link }}" target="_blank" class="fw-bold">🔗 {{ result.title }}</a>
                         <br><small>{{ result.snippet }}</small>
                     </li>
                 {% endfor %}
@@ -96,11 +42,9 @@
         </div>
         {% endif %}
 
-        <!-- 🔙 Back Button -->
-        <div class="back-button">
-            <a href="/">🔙 Back to Search</a>
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-primary">🔙 Back to Search</a>
         </div>
     </div>
 </body>
 </html>
-

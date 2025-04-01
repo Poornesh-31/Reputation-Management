@@ -1,0 +1,11 @@
+```json
+{
+    "amazon india Summary": {
+        "Salary & Compensation": "Salaries at Amazon India are competitive, with a median base salary of around INR 7.5 lakhs per year. Bonuses, stock options, and other benefits can significantly increase total compensation. Salaries vary based on experience, skills, and job location.",
+        "Work Culture & Environment": "Amazon's work culture is fast-paced, demanding, and customer-centric. Employees are expected to be highly motivated, results-oriented, and able to work independently and in teams. The company emphasizes innovation, ownership, and continuous improvement.",
+        "Work-Life Balance": "Amazon offers flexible work options, including remote work opportunities for certain roles. However, the workload can be demanding, and employees may need to work long hours to meet deadlines. The company provides resources and programs to help employees manage work-life balance.",
+        "Career Growth & Promotions": "Amazon offers ample opportunities for career growth and development. Employees have access to training programs, mentorship, and internal mobility opportunities. Promotions are based on performance, merit, and contributions to the company.",
+        "Employee Benefits": "Amazon India provides a comprehensive benefits package, including health insurance, life insurance, retirement plans, paid time off, and employee discounts. The company also offers perks such as free food, transportation, and gym memberships."
+    }
+}
+```
