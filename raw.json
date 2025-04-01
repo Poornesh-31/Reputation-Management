@@ -1,0 +1,393 @@
+{
+    "kind": "customsearch#search",
+    "url": {
+        "type": "application/json",
+        "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+    },
+    "queries": {
+        "request": [
+            {
+                "title": "Google Custom Search - amazon employee reviews salary work culture career growth work-life balance site:linkedin.com OR site:glassdoor.com OR site:indeed.com OR site:bloomberg.com OR site:quora.com OR site:reddit.com OR site:forbes.com OR site:businessinsider.com OR site:ambitionbox.com",
+                "totalResults": "3980000",
+                "searchTerms": "amazon employee reviews salary work culture career growth work-life balance site:linkedin.com OR site:glassdoor.com OR site:indeed.com OR site:bloomberg.com OR site:quora.com OR site:reddit.com OR site:forbes.com OR site:businessinsider.com OR site:ambitionbox.com",
+                "count": 10,
+                "startIndex": 1,
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "off",
+                "cx": "34791939fbf6b48d0"
+            }
+        ],
+        "nextPage": [
+            {
+                "title": "Google Custom Search - amazon employee reviews salary work culture career growth work-life balance site:linkedin.com OR site:glassdoor.com OR site:indeed.com OR site:bloomberg.com OR site:quora.com OR site:reddit.com OR site:forbes.com OR site:businessinsider.com OR site:ambitionbox.com",
+                "totalResults": "3980000",
+                "searchTerms": "amazon employee reviews salary work culture career growth work-life balance site:linkedin.com OR site:glassdoor.com OR site:indeed.com OR site:bloomberg.com OR site:quora.com OR site:reddit.com OR site:forbes.com OR site:businessinsider.com OR site:ambitionbox.com",
+                "count": 10,
+                "startIndex": 11,
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "off",
+                "cx": "34791939fbf6b48d0"
+            }
+        ]
+    },
+    "context": {
+        "title": "reputation management"
+    },
+    "searchInformation": {
+        "searchTime": 0.670383,
+        "formattedSearchTime": "0.67",
+        "totalResults": "3980000",
+        "formattedTotalResults": "3,980,000"
+    },
+    "items": [
+        {
+            "kind": "customsearch#result",
+            "title": "Working at AWS? : r/aws",
+            "htmlTitle": "<b>Working</b> at AWS? : r/aws",
+            "link": "https://www.reddit.com/r/aws/comments/18kk4te/working_at_aws/",
+            "displayLink": "www.reddit.com",
+            "snippet": "Dec 17, 2023 ... 109 votes, 149 comments. Was approached by AWS recruiter for an SA role that's opened. Submitted resume, answered a series of questions,\u00a0...",
+            "htmlSnippet": "Dec 17, 2023 <b>...</b> 109 votes, 149 <b>comments</b>. Was approached by AWS recruiter for an SA role that&#39;s opened. Submitted resume, answered a series of questions,&nbsp;...",
+            "formattedUrl": "https://www.reddit.com/r/aws/comments/18kk4te/working_at_aws/",
+            "htmlFormattedUrl": "https://www.reddit.com/r/aws/comments/18kk4te/<b>work</b>ing_at_aws/",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "og:image": "https://share.redd.it/preview/post/18kk4te",
+                        "theme-color": "#000000",
+                        "og:image:width": "1200",
+                        "og:type": "website",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "r/aws on Reddit: Working at AWS?",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/aws on Reddit: Working at AWS?",
+                        "og:image:height": "630",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/[Deleted Account] - 109 votes and 149 comments",
+                        "twitter:image": "https://share.redd.it/preview/post/18kk4te",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "twitter:site": "@reddit",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+                        "apple-mobile-web-app-capable": "yes",
+                        "og:ttl": "600",
+                        "og:url": "https://www.reddit.com/r/aws/comments/18kk4te/working_at_aws/"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Professions with a great work/life balance that pay over 100k? : r/jobs",
+            "htmlTitle": "Professions with a great <b>work</b>/<b>life balance</b> that <b>pay</b> over 100k? : r/<b>jobs</b>",
+            "link": "https://www.reddit.com/r/jobs/comments/yk3dqk/professions_with_a_great_worklife_balance_that/",
+            "displayLink": "www.reddit.com",
+            "snippet": "Nov 2, 2022 ... 756 votes, 961 comments. Just trying to figure out a new path. For the people that are happy with your job making over 100k with a good\u00a0...",
+            "htmlSnippet": "Nov 2, 2022 <b>...</b> 756 votes, 961 <b>comments</b>. Just trying to figure out a new <b>path</b>. For the people that are happy with your <b>job</b> making over 100k with a good&nbsp;...",
+            "formattedUrl": "https://www.reddit.com/r/.../professions_with_a_great_worklife_balance_th...",
+            "htmlFormattedUrl": "https://www.reddit.com/r/.../professions_with_a_great_<b>worklife</b>_<b>balance</b>_th...",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "og:image": "https://share.redd.it/preview/post/yk3dqk",
+                        "theme-color": "#000000",
+                        "og:image:width": "1200",
+                        "og:type": "website",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "r/jobs on Reddit: Professions with a great work/life balance that pay over 100k?",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/jobs on Reddit: Professions with a great work/life balance that pay over 100k?",
+                        "og:image:height": "630",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/clonegian - 756 votes and 961 comments",
+                        "twitter:image": "https://share.redd.it/preview/post/yk3dqk",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "twitter:site": "@reddit",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+                        "apple-mobile-web-app-capable": "yes",
+                        "og:ttl": "600",
+                        "og:url": "https://www.reddit.com/r/jobs/comments/yk3dqk/professions_with_a_great_worklife_balance_that/"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Is Netflix still a good place to work at? : r/webdev",
+            "htmlTitle": "Is Netflix still a good place to <b>work</b> at? : r/webdev",
+            "link": "https://www.reddit.com/r/webdev/comments/18w5y0e/is_netflix_still_a_good_place_to_work_at/",
+            "displayLink": "www.reddit.com",
+            "snippet": "Jan 2, 2024 ... 164 votes, 84 comments. I recently was approached by a recruiter at Netflix inviting me to interview with them for a very well compensated\u00a0...",
+            "htmlSnippet": "Jan 2, 2024 <b>...</b> 164 votes, 84 <b>comments</b>. I recently was approached by a recruiter at Netflix inviting me to interview with them for a very well compensated&nbsp;...",
+            "formattedUrl": "https://www.reddit.com/r/.../is_netflix_still_a_good_place_to_work_at/",
+            "htmlFormattedUrl": "https://www.reddit.com/r/.../is_netflix_still_a_good_place_to_<b>work</b>_at/",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "og:image": "https://share.redd.it/preview/post/18w5y0e",
+                        "theme-color": "#000000",
+                        "og:image:width": "1200",
+                        "og:type": "website",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "r/webdev on Reddit: Is Netflix still a good place to work at?",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/webdev on Reddit: Is Netflix still a good place to work at?",
+                        "og:image:height": "630",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/lucgagan - 164 votes and 84 comments",
+                        "twitter:image": "https://share.redd.it/preview/post/18w5y0e",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "twitter:site": "@reddit",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+                        "apple-mobile-web-app-capable": "yes",
+                        "og:ttl": "600",
+                        "og:url": "https://www.reddit.com/r/webdev/comments/18w5y0e/is_netflix_still_a_good_place_to_work_at/"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Experiences Working at Amazon Data Science Roles : r/datascience",
+            "htmlTitle": "Experiences <b>Working</b> at <b>Amazon</b> Data Science Roles : r/datascience",
+            "link": "https://www.reddit.com/r/datascience/comments/yda8t7/experiences_working_at_amazon_data_science_roles/",
+            "displayLink": "www.reddit.com",
+            "snippet": "Oct 26, 2022 ... I wanted to hear from those who have worked in data science or machine learning engineer roles. Is the work life balance as bad as people make it seem?",
+            "htmlSnippet": "Oct 26, 2022 <b>...</b> I wanted to hear from those who have worked in data science or machine learning engineer roles. Is the <b>work life balance</b> as bad as people make it seem?",
+            "formattedUrl": "https://www.reddit.com/.../experiences_working_at_amazon_data_science_...",
+            "htmlFormattedUrl": "https://www.reddit.com/.../experiences_<b>work</b>ing_at_<b>amazon</b>_data_science_...",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "og:image": "https://share.redd.it/preview/post/yda8t7",
+                        "theme-color": "#000000",
+                        "og:image:width": "1200",
+                        "og:type": "website",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "r/datascience on Reddit: Experiences Working at Amazon Data Science Roles",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/datascience on Reddit: Experiences Working at Amazon Data Science Roles",
+                        "og:image:height": "630",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/[Deleted Account] - 66 votes and 26 comments",
+                        "twitter:image": "https://share.redd.it/preview/post/yda8t7",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "twitter:site": "@reddit",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+                        "apple-mobile-web-app-capable": "yes",
+                        "og:ttl": "600",
+                        "og:url": "https://www.reddit.com/r/datascience/comments/yda8t7/experiences_working_at_amazon_data_science_roles/"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Capital One Work Culture - Tyson's : r/nova",
+            "htmlTitle": "Capital One <b>Work Culture</b> - Tyson&#39;s : r/nova",
+            "link": "https://www.reddit.com/r/nova/comments/1d2np3j/capital_one_work_culture_tysons/",
+            "displayLink": "www.reddit.com",
+            "snippet": "May 28, 2024 ... 90 votes, 67 comments. Hi everyone! I hope this is the right place to post this\u2026 I was wondering what the work culture is like at Capital\u00a0...",
+            "htmlSnippet": "May 28, 2024 <b>...</b> 90 votes, 67 <b>comments</b>. Hi everyone! I hope this is the right place to post this\u2026 I was wondering what the <b>work culture</b> is like at Capital&nbsp;...",
+            "formattedUrl": "https://www.reddit.com/r/nova/.../capital_one_work_culture_tysons/",
+            "htmlFormattedUrl": "https://www.reddit.com/r/nova/.../capital_one_<b>work</b>_<b>culture</b>_tysons/",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "og:image": "https://share.redd.it/preview/post/1d2np3j",
+                        "theme-color": "#000000",
+                        "og:image:width": "1200",
+                        "og:type": "website",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "r/nova on Reddit: Capital One Work Culture - Tyson\u2019s",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/nova on Reddit: Capital One Work Culture - Tyson\u2019s",
+                        "og:image:height": "630",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/justuraveragereddear - 90 votes and 67 comments",
+                        "twitter:image": "https://share.redd.it/preview/post/1d2np3j",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "twitter:site": "@reddit",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+                        "apple-mobile-web-app-capable": "yes",
+                        "og:ttl": "600",
+                        "og:url": "https://www.reddit.com/r/nova/comments/1d2np3j/capital_one_work_culture_tysons/"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Any reviews on Citi? : r/phcareers",
+            "htmlTitle": "Any <b>reviews</b> on Citi? : r/phcareers",
+            "link": "https://www.reddit.com/r/phcareers/comments/12rqpiu/any_reviews_on_citi/",
+            "displayLink": "www.reddit.com",
+            "snippet": "Apr 20, 2023 ... What's the work culture like? Is there work life balance? How does it compare to the big local banks? Thank you.",
+            "htmlSnippet": "Apr 20, 2023 <b>...</b> What&#39;s the <b>work culture</b> like? Is there <b>work life balance</b>? How does it compare to the big local banks? Thank you.",
+            "formattedUrl": "https://www.reddit.com/r/phcareers/comments/.../any_reviews_on_citi/",
+            "htmlFormattedUrl": "https://www.reddit.com/r/ph<b>career</b>s/comments/.../any_<b>reviews</b>_on_citi/",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "og:image": "https://share.redd.it/preview/post/12rqpiu",
+                        "theme-color": "#000000",
+                        "og:image:width": "1200",
+                        "og:type": "website",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "r/phcareers on Reddit: Any reviews on Citi?",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/phcareers on Reddit: Any reviews on Citi?",
+                        "og:image:height": "630",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/Thick-Meat-9948 - 37 votes and 104 comments",
+                        "twitter:image": "https://share.redd.it/preview/post/12rqpiu",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "twitter:site": "@reddit",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+                        "apple-mobile-web-app-capable": "yes",
+                        "og:ttl": "600",
+                        "og:url": "https://www.reddit.com/r/phcareers/comments/12rqpiu/any_reviews_on_citi/"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Anybody actually ENJOY working at Amazon? : r/amazonemployees",
+            "htmlTitle": "Anybody actually ENJOY <b>working</b> at <b>Amazon</b>? : r/amazonemployees",
+            "link": "https://www.reddit.com/r/amazonemployees/comments/1g014yh/anybody_actually_enjoy_working_at_amazon/",
+            "displayLink": "www.reddit.com",
+            "snippet": "Oct 9, 2024 ... 70 votes, 119 comments. I understand the majority of people who post do so to complain, so I get that part. But seems like every other post\u00a0...",
+            "htmlSnippet": "Oct 9, 2024 <b>...</b> 70 votes, 119 <b>comments</b>. I understand the majority of people who post do so to complain, so I get that part. But seems like every other post&nbsp;...",
+            "formattedUrl": "https://www.reddit.com/.../amazonemployees/.../anybody_actually_enjoy_...",
+            "htmlFormattedUrl": "https://www.reddit.com/.../<b>amazonemployee</b>s/.../anybody_actually_enjoy_...",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "og:image": "https://share.redd.it/preview/post/1g014yh",
+                        "theme-color": "#000000",
+                        "og:image:width": "1200",
+                        "og:type": "website",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "r/amazonemployees on Reddit: Anybody actually ENJOY working at Amazon?",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/amazonemployees on Reddit: Anybody actually ENJOY working at Amazon?",
+                        "og:image:height": "630",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/NeonTankTop - 70 votes and 119 comments",
+                        "twitter:image": "https://share.redd.it/preview/post/1g014yh",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "twitter:site": "@reddit",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+                        "apple-mobile-web-app-capable": "yes",
+                        "og:ttl": "600",
+                        "og:url": "https://www.reddit.com/r/amazonemployees/comments/1g014yh/anybody_actually_enjoy_working_at_amazon/"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Is working at Amazon really as bad as everyone says? : r/csMajors",
+            "htmlTitle": "Is <b>working</b> at <b>Amazon</b> really as bad as everyone says? : r/csMajors",
+            "link": "https://www.reddit.com/r/csMajors/comments/qm3kyf/is_working_at_amazon_really_as_bad_as_everyone/",
+            "displayLink": "www.reddit.com",
+            "snippet": "Nov 3, 2021 ... Am an Amazon Software Engineer though I'm L5 and not a new grad. Work life balance is highly team dependent. Be careful what team you join\u00a0...",
+            "htmlSnippet": "Nov 3, 2021 <b>...</b> Am an <b>Amazon</b> Software Engineer though I&#39;m L5 and not a new grad. <b>Work life balance</b> is highly team dependent. Be careful what team you join&nbsp;...",
+            "formattedUrl": "https://www.reddit.com/.../is_working_at_amazon_really_as_bad_as_every...",
+            "htmlFormattedUrl": "https://www.reddit.com/.../is_<b>work</b>ing_at_<b>amazon</b>_really_as_bad_as_every...",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "og:image": "https://share.redd.it/preview/post/qm3kyf",
+                        "theme-color": "#000000",
+                        "og:image:width": "1200",
+                        "og:type": "website",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "r/csMajors on Reddit: Is working at Amazon really as bad as everyone says?",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/csMajors on Reddit: Is working at Amazon really as bad as everyone says?",
+                        "og:image:height": "630",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/want0sl33p - 86 votes and 45 comments",
+                        "twitter:image": "https://share.redd.it/preview/post/qm3kyf",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "twitter:site": "@reddit",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+                        "apple-mobile-web-app-capable": "yes",
+                        "og:ttl": "600",
+                        "og:url": "https://www.reddit.com/r/csMajors/comments/qm3kyf/is_working_at_amazon_really_as_bad_as_everyone/"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "I have job offers from Nvidia, Qualcomm, and Amazon. Which one ...",
+            "htmlTitle": "I have <b>job</b> offers from Nvidia, Qualcomm, and <b>Amazon</b>. Which one ...",
+            "link": "https://www.quora.com/I-have-job-offers-from-Nvidia-Qualcomm-and-Amazon-Which-one-will-be-better-in-terms-of-work-environment-career-growth-and-other-benefits",
+            "displayLink": "www.quora.com",
+            "snippet": "Jun 14, 2013 ... Which one will be better in terms of work environment, career growth, and other benefits? All related (40).",
+            "htmlSnippet": "Jun 14, 2013 <b>...</b> Which one will be better in terms of <b>work environment</b>, <b>career growth</b>, and other benefits? All related (40).",
+            "formattedUrl": "https://www.quora.com/I-have-job-offers-from-Nvidia-Qualcomm-and-Am...",
+            "htmlFormattedUrl": "https://www.quora.com/I-have-job-offers-from-Nvidia-Qualcomm-and-<b>Am</b>...",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "al:android:url": "intent://www.quora.com/I-have-job-offers-from-Nvidia-Qualcomm-and-Amazon-Which-one-will-be-better-in-terms-of-work-environment-career-growth-and-other-benefits#Intent;scheme=qhttp;package=com.quora.android;S.market_referrer=launch_url=https%3A%2F%2Fwww.quora.com%2FI-have-job-offers-from-Nvidia-Qualcomm-and-Amazon-Which-one-will-be-better-in-terms-of-work-environment-career-growth-and-other-benefits&logging_data=uid%3DNone;end",
+                        "theme-color": "#b92b27",
+                        "viewport": "initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, minimum-scale=1, viewport-fit=cover",
+                        "al:android:package": "com.quora.android",
+                        "fb:pages": "255232486973",
+                        "twitter:widgets:theme": "light"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Is Epic a good company to work for? Do they value their staff, good ...",
+            "htmlTitle": "Is Epic a good <b>company</b> to <b>work</b> for? Do they value their <b>staff</b>, good ...",
+            "link": "https://www.reddit.com/r/epicsystems/comments/11a8ydh/is_epic_a_good_company_to_work_for_do_they_value/",
+            "displayLink": "www.reddit.com",
+            "snippet": "Feb 23, 2023 ... Is Epic a good company to work for? Do they value their staff, good work life balance, good upward career opportunities, good pay? \u00b7 Comments\u00a0...",
+            "htmlSnippet": "Feb 23, 2023 <b>...</b> Is Epic a good <b>company</b> to <b>work</b> for? Do they value their <b>staff</b>, good <b>work life balance</b>, good upward <b>career</b> opportunities, good <b>pay</b>? &middot; <b>Comments</b>&nbsp;...",
+            "formattedUrl": "https://www.reddit.com/.../is_epic_a_good_company_to_work_for_do_the...",
+            "htmlFormattedUrl": "https://www.reddit.com/.../is_epic_a_good_company_to_<b>work</b>_for_do_the...",
+            "pagemap": {
+                "metatags": [
+                    {
+                        "og:image": "https://share.redd.it/preview/post/11a8ydh",
+                        "theme-color": "#000000",
+                        "og:image:width": "1200",
+                        "og:type": "website",
+                        "og:image:alt": "An image containing a preview of the post",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "r/epicsystems on Reddit: Is Epic a good company to work for? Do they value their staff, good work life balance, good upward career opportunities, good pay?",
+                        "og:site_name": "Reddit",
+                        "og:title": "r/epicsystems on Reddit: Is Epic a good company to work for? Do they value their staff, good work life balance, good upward career opportunities, good pay?",
+                        "og:image:height": "630",
+                        "msapplication-navbutton-color": "#000000",
+                        "og:description": "Posted by u/MrPleavin - 43 votes and 34 comments",
+                        "twitter:image": "https://share.redd.it/preview/post/11a8ydh",
+                        "apple-mobile-web-app-status-bar-style": "black",
+                        "twitter:site": "@reddit",
+                        "viewport": "width=device-width, initial-scale=1, viewport-fit=cover",
+                        "apple-mobile-web-app-capable": "yes",
+                        "og:ttl": "600",
+                        "og:url": "https://www.reddit.com/r/epicsystems/comments/11a8ydh/is_epic_a_good_company_to_work_for_do_they_value/"
+                    }
+                ]
+            }
+        }
+    ]
+}

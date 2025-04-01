@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Working at AWS? : r/aws",
+        "snippet": "dec 17, 2023 ... 109 votes, 149 comments. was approached by aws recruiter for an sa role that's opened. submitted resume, answered a series of questions,\u00a0...",
+        "link": "https://www.reddit.com/r/aws/comments/18kk4te/working_at_aws/",
+        "content": "\n              News, articles and tools covering Amazon Web Services (AWS), including S3, EC2, SQS, RDS, DynamoDB, IAM, CloudFormation, AWS-CDK, Route 53, CloudFront, Lambda, VPC, Cloudwatch, Glacier and more.\n             \n    Was approached by AWS recruiter for an SA role that\u2019s opened. Submitted resume, answered a series of questions, and passed a personality and technical assessment test.\n   \n    All fine up to now, but the more I read about AWS the more I\u2019m questioning if I might end up reg"
+    },
+    {
+        "title": "Experiences Working at Amazon Data Science Roles : r/datascience",
+        "snippet": "oct 26, 2022 ... i wanted to hear from those who have worked in data science or machine learning engineer roles. is the work life balance as bad as people make it seem?",
+        "link": "https://www.reddit.com/r/datascience/comments/yda8t7/experiences_working_at_amazon_data_science_roles/",
+        "content": "\nWiki has been Updated!\n \n              A space for data science professionals to engage in discussions and debates on the subject of data science.\n             \n    What's it like working at Amazon as a data scientist? I'm a jr data scientist with 2 yoe looking to transition to FAANG+, but with the economic situation, Amazon is the only company I'm seriously considering. I had a recruiter reach out to me last week and I wanted to hear from those who have worked in data science or machine learni"
+    },
+    {
+        "title": "Capital One Work Culture - Tyson's : r/nova",
+        "snippet": "may 28, 2024 ... 90 votes, 67 comments. hi everyone! i hope this is the right place to post this\u2026 i was wondering what the work culture is like at capital\u00a0...",
+        "link": "https://www.reddit.com/r/nova/comments/1d2np3j/capital_one_work_culture_tysons/",
+        "content": "\n              A community for Northern Virginia -- Alexandria, Arlington County, Fairfax County, Falls Church, Loudoun County, Prince William County, and the surrounding areas.\n             \n    Hi everyone!\n   \n    I hope this is the right place to post this\u2026 I was wondering what the work culture is like at Capital One? I currently work at a Big Four and have had a great experience work culture wise but have hit a wall with internal growth. I was reached out by a recruiter for Cap. for a manag"
+    },
+    {
+        "title": "Any reviews on Citi? : r/phcareers",
+        "snippet": "apr 20, 2023 ... what's the work culture like? is there work life balance? how does it compare to the big local banks? thank you.",
+        "link": "https://www.reddit.com/r/phcareers/comments/12rqpiu/any_reviews_on_citi/",
+        "content": "\n    Meet our 'mod-verified AMA guests' and check out their \"Ask-Me-Anything\" submissions!\n   \n              Anything related to careers in the Philippines. Job listing not allowed.\n             \n    Any reviews on Citi?\n   \n    Hi all! I just received a JO from Citi. It's for a credit risk analyst position. Does anyone mind sharing their experiences with Citi? Was curious on the following:\n   \n    How often are promotions/pay raises? Does it take long?\n   \n    What's the work culture like? Is t"
+    }
+]

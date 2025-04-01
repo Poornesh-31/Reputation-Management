@@ -1,11 +1,9 @@
 import os
 import vertexai
-import requests
 import json
 from flask import Flask, render_template, request
 from vertexai.generative_models import GenerativeModel
 from dotenv import load_dotenv
-import re
 
 # ✅ Load environment variables
 load_dotenv()
@@ -22,76 +20,44 @@ gemini_model = GenerativeModel("gemini-pro")
 app = Flask(__name__)
 app.debug = True  
 
-# ✅ Google Custom Search with filtering
-def google_search(company_name):
-    query = f"{company_name} employee reviews salary work culture career growth work-life balance site:linkedin.com OR site:glassdoor.com OR site:indeed.com OR site:bloomberg.com OR site:quora.com OR site:reddit.com"
-    url = "https://www.googleapis.com/customsearch/v1"
-    params = {
-        "key": os.getenv('API_KEY'),
-        "cx": os.getenv('SEARCH_ENGINE_ID'),
-        "q": query,
-        "num": 7
-    }
-    response = requests.get(url, params=params)
-    response.raise_for_status()
-    search_results = response.json()
-
-    # Filter for only relevant websites and remove job postings
-    allowed_sources = ["linkedin.com", "glassdoor.com", "indeed.com", "bloomberg.com", "quora.com", "reddit.com"]
-    filtered_results = [
-        {
-            "title": item.get("title"),
-            "snippet": item.get("snippet"),
-            "link": item.get("link")
-        }
-        for item in search_results.get("items", [])
-        if any(source in item.get("link", "") for source in allowed_sources)
-        and not re.search(r'job|hiring|apply', item.get("title", "").lower())
-    ]
-
-    return filtered_results
-
-# ✅ AI Summary with improved prompt and JSON parsing
-def generate_summary(search_results, company_name):
+# ✅ AI Summary with structured JSON output
+def generate_summary(company_name):
     prompt = f"""
-        Provide a structured JSON summary for '{company_name}' focusing on job-seeker insights. 
-        The JSON should include the following keys with real, company-specific insights:
-        {{"{company_name} Summary": {{
-            "Salary & Compensation": "Average salary ranges and bonuses.",
-            "Work Culture & Environment": "Overview of company culture.",
-            "Work-Life Balance": "Insights into flexibility and work hours.",
-            "Career Growth & Promotions": "Opportunities for growth.",
-            "Employee Benefits": "Key perks and benefits."
-        }} }}
-        Only return the JSON object without extra text or explanations.
+    You are an AI assistant that provides structured company reputation summaries for job seekers. 
+    Generate a valid **JSON object only** with insights about {company_name} in the following format:
+    
+    {{
+        "{company_name} Summary": {{
+            "Salary & Compensation": "Brief insights into salary, bonuses, and other compensation details.",
+            "Work Culture & Environment": "Brief insights about the company culture, work environment, and leadership.",
+            "Work-Life Balance": "Insights into working hours, flexibility, and remote work opportunities.",
+            "Career Growth & Promotions": "Overview of promotions, learning opportunities, and career growth.",
+            "Employee Benefits": "Summary of perks, insurance, paid leaves, and other benefits."
+        }}
+    }}
+    
+    Do not add explanations, only return a **valid JSON object**.
     """
-
+    
     response = gemini_model.generate_content(prompt)
     print("AI Full Response:", response.text)
+    
+    # Log AI response to a file
+    with open("ai_response.txt", "w", encoding="utf-8") as file:
+        file.write(response.text)
+    
+    # Extract JSON properly
+    try:
+        json_start = response.text.find("{")
+        json_end = response.text.rfind("}")
+        if json_start != -1 and json_end != -1:
+            json_data = response.text[json_start: json_end + 1]
+            return json.loads(json_data)
+    except json.JSONDecodeError as e:
+        print(f"JSON Decode Error: {e}")
+        return {"error": "Failed to parse AI response."}
 
-    # Clean the response to ensure valid JSON
-    cleaned_response = clean_json_string(response.text.strip())
-
-    # Try extracting JSON using regex
-    match = re.search(r'\{.*\}', cleaned_response, re.DOTALL)
-
-    if match:
-        try:
-            print("Matched JSON String:", match.group(0))
-            return json.loads(match.group(0))
-        except json.JSONDecodeError as e:
-            print(f"JSON Decode Error: {e}")
-            return {"error": "Failed to parse AI response."}
-    else:
-        print("No JSON response detected.")
-        return {"error": "No JSON response from AI."}
-
-# ✅ Clean response text to ensure it's valid JSON
-def clean_json_string(response_text):
-    # Remove unwanted characters or extra spaces from the AI response
-    cleaned_text = re.sub(r'[\n\t\r]', '', response_text)  # Remove newlines, tabs, and carriage returns
-    cleaned_text = cleaned_text.strip()  # Remove leading/trailing whitespace
-    return cleaned_text
+    return {"error": "No JSON response from AI."}
 
 @app.route('/')
 def index():
@@ -100,16 +66,14 @@ def index():
 @app.route('/summary', methods=['POST'])
 def summary():
     company_name = request.form['company_name']
-    search_results = google_search(company_name)
-    summary_data = generate_summary(search_results, company_name)
-
+    summary_data = generate_summary(company_name)
+    
     if "error" in summary_data:
         return render_template('index.html', error=summary_data["error"])
-
+    
     return render_template('summary.html',
                            company=company_name,
-                           summary=summary_data.get(f"{company_name} Summary", {}),
-                           search_results=search_results)
+                           summary=summary_data.get(f"{company_name} Summary", {}))
 
 if __name__ == '__main__':
     app.run(debug=True)
